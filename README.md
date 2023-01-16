@@ -12,8 +12,26 @@ It uses the CycloneDx Schema, and can combine SBoms in either JSon or XML, and o
 ## Usage:
 
 ### Build artifact via maven.
-### Maven Command
-mvn clean package
+
+Maven Command:
+
+    mvn clean package
+
+NOTE: If your maven repositories do not serve `com.lmco.efoss.sbom`
+you can build and locally install it from GitHub (commit below is
+the last with version "1.1.1", not tagged in the repository) with:
+
+    git clone https://github.com/CycloneDX/sbom-commons \
+        -b 95af66fb8c4400d645cb654dc0bcabe6e118f59d
+    (cd sbom-commons && mvn clean package && \
+        mvn install:install-file \
+            -DgroupId=com.lmco.efoss.sbom \
+            -DartifactId=sbom-commons \
+            -Dpackaging=jar \
+            -DgeneratePom=true \
+            -Dfile=target/sbomcommons.1.1.1.jar \
+            -Dversion=1.1.1
+    )
 
 ### Run
 To run as a standalone java application, you can look at the "example.sh" shell script for an example.
