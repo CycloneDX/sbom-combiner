@@ -2,26 +2,47 @@
 Lockheed Martin developed utility to combine multiple SBOMs
 
 This application is used to combine two or more Software Bill Of Materials (SBOM) commonly known as SBoms or Boms into a single Bom.
-It uses the CycloneDx Schema, and can combine SBoms in either JSon or XML, and output either a JSon or XML Bom.  
+It uses the CycloneDx Schema, and can combine SBoms in either JSon or XML, and output either a JSon or XML Bom.
 
 ## Prerequisites
 - Open JDK11
-- Apache Maven 3.6.3 or greater installed 
+- Apache Maven 3.6.3 or greater installed
 - (Recommended) java IDE Eclipse with Subclipse 4.3.0 plug-in
 
 ## Usage:
 
 ### Build artifact via maven.
-### Maven Command
-mvn clean package
+
+Maven Command:
+
+    mvn clean package
+
+NOTE: If your maven repositories do not serve `com.lmco.efoss.sbom`
+you can build and locally install it from GitHub (commit below is
+the last with version "1.1.1", not tagged in the repository; you
+may also use the latest commit and check the version name in its
+`pom.xml`, e.g. `1.2.0-SNAPSHOT` to use in installation below and
+in the `pom.xml` of this project) with a command like the following:
+
+    git clone https://github.com/CycloneDX/sbom-commons \
+        -b 95af66fb8c4400d645cb654dc0bcabe6e118f59d
+    (cd sbom-commons && mvn clean package && \
+        mvn install:install-file \
+            -DgroupId=com.lmco.efoss.sbom \
+            -DartifactId=sbom-commons \
+            -Dpackaging=jar \
+            -DgeneratePom=true \
+            -Dfile=target/sbomcommons.1.1.1.jar \
+            -Dversion=1.1.1
+    )
 
 ### Run
 To run as a standalone java application, you can look at the "example.sh" shell script for an example.
-You can also use the provided "combine.sh" script as a pass through to the jar.  It assumes all the basic settings.
+You can also use the provided "compare.sh" script as a pass through to the jar.  It assumes all the basic settings.
 
-### Help is available.   
+### Help is available.
 <pre>
-    ./combine.sh -h
+    ./compare.sh -h
 </pre>
 
 ### Help Output shows options for running the SBomCombiner application.
@@ -39,20 +60,20 @@ usage: help
     -v      --version   &lt;arg&gt;   (Optional) Version of the upper level component of the combined SBom.
 </pre>
 
-### Running SBomCombiner. 
+### Running SBomCombiner.
 ### In this example it wil combine all files (xml, and json) from the directory ./test into an output.json (also in ./test) bom file.
 <pre>
-    ./combine.sh -d ./test -o ./test/output -f json
+    ./compare.sh -d ./test -o ./test/output -f json
 </pre>
 
 ### In this example it will combine two files (sbomcommons.json, sbomcomparator.xml) both in the test directory into an ouptut.xml bom file.
 <pre>
-    ./combine.sh -f1 ./test/sbomcommons.json -f2 ./test/sbomcomparator.xml -o output -f xml
+    ./compare.sh -f1 ./test/sbomcommons.json -f2 ./test/sbomcomparator.xml -o output -f xml
 </pre>
 
 ### In this example it wil combine all files (xml, and json) from the directory ./test into an output.xml (also in ./test) bom file.  Settings the upper level SBOM metadata Component's group, name, and version.
 <pre>
-    ./combine.sh -d ./test/ -o ./test/output -f xml -n SBOM -g com.lmco.efoss -v 2.0.3
+    ./compare.sh -d ./test/ -o ./test/output -f xml -n SBOM -g com.lmco.efoss -v 2.0.3
 </pre>
 
 ## API:

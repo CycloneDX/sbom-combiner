@@ -24,7 +24,7 @@ import org.apache.commons.cli.Option;
 import org.apache.log4j.Logger;
 import org.cyclonedx.model.Property;
 
-import com.lmco.efoss.sbom.commons.utils.StringUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.StringUtils;
 import com.lmco.efoss.sbom.comparator.dtos.CompareComponent;
 import com.lmco.efoss.sbom.comparator.dtos.HtmlTableValue;
 import com.lmco.efoss.sbom.comparator.dtos.ModifiedComponent;
