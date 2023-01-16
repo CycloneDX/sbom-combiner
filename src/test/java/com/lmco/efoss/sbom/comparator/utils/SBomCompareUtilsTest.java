@@ -18,9 +18,9 @@ import org.junit.Rule;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import com.lmco.efoss.sbom.commons.test.utils.Log4JTestWatcher;
-import com.lmco.efoss.sbom.commons.test.utils.TestUtils;
-import com.lmco.efoss.sbom.commons.utils.DateUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.test.utils.Log4JTestWatcher;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.test.utils.TestUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.DateUtils;
 import com.lmco.efoss.sbom.comparator.dtos.SBomDiff;
 
 

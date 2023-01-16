@@ -20,8 +20,8 @@ import org.cyclonedx.model.Metadata;
 import org.cyclonedx.model.Property;
 import org.cyclonedx.model.Tool;
 
-import com.lmco.efoss.sbom.commons.utils.DateUtils;
-import com.lmco.efoss.sbom.commons.utils.ToolsUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.DateUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.ToolsUtils;
 import com.lmco.efoss.sbom.comparator.dtos.ModifiedComponent;
 import com.lmco.efoss.sbom.comparator.dtos.SBomDiff;
 import com.lmco.efoss.sbom.comparator.exceptions.SBomComparatorException;

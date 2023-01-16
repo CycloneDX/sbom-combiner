@@ -13,7 +13,7 @@ import java.util.List;
 
 import org.cyclonedx.model.Bom;
 
-import com.lmco.efoss.sbom.commons.utils.StringUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.StringUtils;
 import com.lmco.efoss.sbom.comparator.dtos.CompareComponent;
 import com.lmco.efoss.sbom.comparator.dtos.ModifiedComponent;
 import com.lmco.efoss.sbom.comparator.dtos.SBomDiff;

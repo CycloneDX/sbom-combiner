@@ -19,7 +19,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.apache.log4j.Logger;
 import org.cyclonedx.exception.GeneratorException;
 
-import com.lmco.efoss.sbom.commons.utils.StringUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.StringUtils;
 import com.lmco.efoss.sbom.comparator.dtos.SBomDiff;
 import com.lmco.efoss.sbom.comparator.exceptions.SBomComparatorException;
 import com.lmco.efoss.sbom.comparator.generator.SBomJSonDiffGenerator;

@@ -25,11 +25,11 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.lmco.efoss.sbom.commons.utils.DateUtils;
-import com.lmco.efoss.sbom.commons.utils.FileOutputUtils;
-import com.lmco.efoss.sbom.commons.utils.SBomCommons;
-import com.lmco.efoss.sbom.commons.utils.SBomCommonsException;
-import com.lmco.efoss.sbom.commons.utils.SBomFileUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.DateUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.FileOutputUtils;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.SBomCommons;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.SBomCommonsException;
+import org.cyclonedx.contrib.com.lmco.efoss.sbom.commons.utils.SBomFileUtils;
 import com.lmco.efoss.sbom.comparator.builder.HtmlBuilder;
 import com.lmco.efoss.sbom.comparator.dtos.SBomDiff;
 import com.lmco.efoss.sbom.comparator.exceptions.SBomComparatorException;
