@@ -17,11 +17,11 @@ mvn clean package
 
 ### Run
 To run as a standalone java application, you can look at the "example.sh" shell script for an example.
-You can also use the provided "combine.sh" script as a pass through to the jar.  It assumes all the basic settings.
+You can also use the provided "compare.sh" script as a pass through to the jar.  It assumes all the basic settings.
 
 ### Help is available.
 <pre>
-    ./combine.sh -h
+    ./compare.sh -h
 </pre>
 
 ### Help Output shows options for running the SBomCombiner application.
@@ -42,17 +42,17 @@ usage: help
 ### Running SBomCombiner.
 ### In this example it wil combine all files (xml, and json) from the directory ./test into an output.json (also in ./test) bom file.
 <pre>
-    ./combine.sh -d ./test -o ./test/output -f json
+    ./compare.sh -d ./test -o ./test/output -f json
 </pre>
 
 ### In this example it will combine two files (sbomcommons.json, sbomcomparator.xml) both in the test directory into an ouptut.xml bom file.
 <pre>
-    ./combine.sh -f1 ./test/sbomcommons.json -f2 ./test/sbomcomparator.xml -o output -f xml
+    ./compare.sh -f1 ./test/sbomcommons.json -f2 ./test/sbomcomparator.xml -o output -f xml
 </pre>
 
 ### In this example it wil combine all files (xml, and json) from the directory ./test into an output.xml (also in ./test) bom file.  Settings the upper level SBOM metadata Component's group, name, and version.
 <pre>
-    ./combine.sh -d ./test/ -o ./test/output -f xml -n SBOM -g com.lmco.efoss -v 2.0.3
+    ./compare.sh -d ./test/ -o ./test/output -f xml -n SBOM -g com.lmco.efoss -v 2.0.3
 </pre>
 
 ## API:

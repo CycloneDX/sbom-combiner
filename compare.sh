@@ -1,6 +1,7 @@
 #!/bin/bash
 # Example will compare two Sboms, file 1 (-f1) OrgSbom.xml to file 2 (-f2) ModifiedSbom.xml and produce output file (-o) output in a test directory in the xml format (-f). Will additionally produce html output file (-t). 
 # ./compare.sh -f1 ./test/OrgSbom.xml -f2 ./test/ModifiedSbom.xml -o ./test/output -f xml -t ./test/quickOutput
+# NOTE: This script was also known as "combine.sh" in earlier documentation.
 
 if [ -z "$JAVA_HOME" ]
 then
