@@ -7,15 +7,16 @@ if [ -z "$JAVA_HOME" ]
 then
 	echo "\$JAVA_HOME is empty, trying to set it now."
 	# Wild guess:
-	export JAVA_HOME="`pwd`/jdk-11"
-	export CLASSPATH="$JAVA_HOME"
-	export PATH="/bin:/usr/bin:$JAVA_HOME/bin"
+	JAVA_HOME="$(pwd)/jdk-11"
+	CLASSPATH="$JAVA_HOME"
+	PATH="/bin:/usr/bin:${JAVA_HOME}/bin"
+	export JAVA_HOME CLASSPATH PATH
 else
 	echo "\$JAVA_HOME is already set."
 fi
 
-echo "JAVA_HOME=$JAVA_HOME"
-cd "$(dirname "$0")"
+echo "JAVA_HOME=${JAVA_HOME}"
+cd "$(dirname "$0")" || exit
 ls -la ./target/sbomcomparator-[0-9].[0-9].[0-9].jar || mvn compile || exit
 
 "$JAVA_HOME/bin/java" -Xms256m -Xmx2048m -Dlog4j.configuration=file:./logging/log4j.xml -jar ./target/sbomcomparator-[0-9].[0-9].[0-9].jar "$@"
