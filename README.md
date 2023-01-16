@@ -2,11 +2,11 @@
 Lockheed Martin developed utility to combine multiple SBOMs
 
 This application is used to combine two or more Software Bill Of Materials (SBOM) commonly known as SBoms or Boms into a single Bom.
-It uses the CycloneDx Schema, and can combine SBoms in either JSon or XML, and output either a JSon or XML Bom.  
+It uses the CycloneDx Schema, and can combine SBoms in either JSon or XML, and output either a JSon or XML Bom.
 
 ## Prerequisites
 - Open JDK11
-- Apache Maven 3.6.3 or greater installed 
+- Apache Maven 3.6.3 or greater installed
 - (Recommended) java IDE Eclipse with Subclipse 4.3.0 plug-in
 
 ## Usage:
@@ -19,7 +19,7 @@ mvn clean package
 To run as a standalone java application, you can look at the "example.sh" shell script for an example.
 You can also use the provided "combine.sh" script as a pass through to the jar.  It assumes all the basic settings.
 
-### Help is available.   
+### Help is available.
 <pre>
     ./combine.sh -h
 </pre>
@@ -39,7 +39,7 @@ usage: help
     -v      --version   &lt;arg&gt;   (Optional) Version of the upper level component of the combined SBom.
 </pre>
 
-### Running SBomCombiner. 
+### Running SBomCombiner.
 ### In this example it wil combine all files (xml, and json) from the directory ./test into an output.json (also in ./test) bom file.
 <pre>
     ./combine.sh -d ./test -o ./test/output -f json
