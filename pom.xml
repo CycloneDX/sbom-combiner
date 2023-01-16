@@ -17,6 +17,7 @@
 	<properties>
 		<cli.commons.version>1.4</cli.commons.version>
 		<!-- See https://github.com/CycloneDX/sbom-commons and README.md here if needed: -->
+		<!-- com.lmco.commons.version>1.2.0-SNAPSHOT</com.lmco.commons.version -->
 		<com.lmco.commons.version>1.1.1</com.lmco.commons.version>
 		<cyclonedx.core.java.version>5.0.2</cyclonedx.core.java.version>
 		<cyclonedx.maven.plugin.version>2.5.1</cyclonedx.maven.plugin.version>

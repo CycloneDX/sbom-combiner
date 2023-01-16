@@ -19,7 +19,10 @@ Maven Command:
 
 NOTE: If your maven repositories do not serve `com.lmco.efoss.sbom`
 you can build and locally install it from GitHub (commit below is
-the last with version "1.1.1", not tagged in the repository) with:
+the last with version "1.1.1", not tagged in the repository; you
+may also use the latest commit and check the version name in its
+`pom.xml`, e.g. `1.2.0-SNAPSHOT` to use in installation below and
+in the `pom.xml` of this project) with a command like the following:
 
     git clone https://github.com/CycloneDX/sbom-commons \
         -b 95af66fb8c4400d645cb654dc0bcabe6e118f59d
